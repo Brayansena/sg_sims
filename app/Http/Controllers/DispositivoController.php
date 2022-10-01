@@ -95,8 +95,8 @@ class DispositivoController extends Controller
     public function edit($id)
     {
         $dispositivo = Dispositivo::find($id);
-        $tipoDispositivo=TipoDispositivo::pluck('dispositivo','id');
-        $estado=Estado::pluck('estado','id');
+        $tipoDispositivo=TipoDispositivo::pluck('dispositivo','dispositivo');
+        $estado=Estado::pluck('estado','estado');
         return view('dispositivo.edit', compact('dispositivo','tipoDispositivo','estado'));
     }
 
