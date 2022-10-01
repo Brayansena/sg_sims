@@ -95,11 +95,11 @@ class PuntoVentaController extends Controller
     public function edit($id)
     {
         $puntoVenta = PuntoVenta::find($id);
-        $zonas=Zona::pluck('zona','id');
-        $municipios=Municipio::pluck('municipio','id');
-        $regionales=Regionale::pluck('regional','id');
-        $conexiones=Conexione::pluck('conexion','id');
-        $canales=Canale::pluck('canal','id');
+        $zonas=Zona::pluck('zona','zona');
+        $municipios=Municipio::pluck('municipio','municipio');
+        $regionales=Regionale::pluck('regional','regional');
+        $conexiones=Conexione::pluck('conexion','conexion');
+        $canales=Canale::pluck('canal','canal');
 
         return view('punto-venta.edit', compact('puntoVenta','zonas','municipios','regionales','conexiones','canales'));
     }
