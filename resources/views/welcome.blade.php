@@ -34,7 +34,7 @@
                     @auth
                     <a href="{{ url('/home') }}" class="link-warning">Home</a>
                     <div class="" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" style="color: #ef1616;" href="{{ route('logout') }}"
+                        <a class="dropdown-item" style="color: #ff0000;" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
                             {{ __('Cerrar Sesion') }}
