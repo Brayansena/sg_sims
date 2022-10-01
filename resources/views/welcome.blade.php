@@ -33,16 +33,17 @@
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                     <a href="{{ url('/home') }}" class="link-warning">Home</a>
-                    <a class="dropdown-item" style="color:#f90b2c;" href="{{ route('logout') }}"
-                        @csrf
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Cerrar Sesion') }}
-                            </a>
+                    <div class="" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" style="color: #ef1616;" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Cerrar Sesion') }}
+                        </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-
-                            </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
                     @else
                         <a href="{{ route('login') }}" class="link-warning">Iniciar Sesion</a>
 
