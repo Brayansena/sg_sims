@@ -111,7 +111,7 @@ class PuntoVentaController extends Controller
      * @param  PuntoVenta $puntoVenta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PuntoVenta $puntoVenta)
+    public function update(Request $request, $id)
     {
         $puntoVenta=PuntoVenta::findOrFail($id);
         $puntoVenta->update($request->all());
